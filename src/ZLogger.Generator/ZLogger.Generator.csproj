@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>12</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AnalyzerLanguage>cs</AnalyzerLanguage>
+		<DefineConstants>ZLOGGER_GENERATOR</DefineConstants>
+		<Nullable>enable</Nullable>
+		<IsPackable>false</IsPackable>
+		<PackageId>ZLogger.Generator</PackageId>
+
+		<IsRoslynComponent>true</IsRoslynComponent>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<!-- We don't need to publish the package to NuGet. bundled with ZLogger  -->
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\ZLogger\ZLoggerMessageAttribtue.cs" Link="ZLoggerMessageAttribtue.cs" />
+	</ItemGroup>
+</Project>
